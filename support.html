@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DriveMail Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f0;
+    --surface: #ffffff;
+    --text: #1c2126;
+    --muted: #5b636b;
+    --line: #e2e0d8;
+    --accent: #b77d0a;
+    --accent-soft: #fbf1db;
+    --road: #1c2126;
+    --road-text: #f2f2eb;
+    --signal: #f2b533;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15191d;
+      --surface: #1c2126;
+      --text: #eceae3;
+      --muted: #a3aab1;
+      --line: #2c333a;
+      --accent: #f2b533;
+      --accent-soft: #2a2618;
+      --road: #0f1215;
+      --road-text: #f2f2eb;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15191d;
+    --surface: #1c2126;
+    --text: #eceae3;
+    --muted: #a3aab1;
+    --line: #2c333a;
+    --accent: #f2b533;
+    --accent-soft: #2a2618;
+    --road: #0f1215;
+    --road-text: #f2f2eb;
+  }
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  header {
+    background: var(--road);
+    color: var(--road-text);
+    padding: 3rem 1.25rem 2.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 1.1rem;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--signal) 0 38px, transparent 38px 70px);
+    opacity: 0.85;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; }
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 0.95rem;
+    color: var(--signal);
+    text-transform: uppercase;
+  }
+  h1 { font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1.15; margin: 0.35rem 0 0.5rem; }
+  .lede { color: #c9ced3; margin: 0; max-width: 36rem; }
+  main { padding: 2rem 1.25rem 3rem; }
+  .contact {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+  }
+  .contact p { margin: 0.25rem 0; }
+  .contact a.email { font-weight: 600; font-size: 1.15rem; }
+  h2 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
+  ol, ul { padding-left: 1.3rem; }
+  li { margin: 0.35rem 0; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 0.9rem 0;
+  }
+  .card h3 { margin-top: 0; }
+  .card p { margin: 0.4rem 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 26rem; background: var(--surface); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.9rem; color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  details {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 0.85rem 1.1rem;
+    margin: 0.7rem 0;
+  }
+  summary { cursor: pointer; font-weight: 600; }
+  details p, details ul { margin: 0.6rem 0 0.2rem; }
+  .safety {
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">DriveMail</div>
+    <h1>Support</h1>
+    <p class="lede">DriveMail announces new email while you drive, reads or summarizes it aloud, and lets you reply by voice.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="contact">
+    <p><strong>Need help?</strong> Email Dave Pickles, DriveMail's developer, at</p>
+    <p><a class="email" href="mailto:jimmy@askjimmy.ca?subject=DriveMail%20support">jimmy@askjimmy.ca</a></p>
+    <p>Please include your iPhone model, iOS version, which email service you're using, and what happened.</p>
+  </div>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li>Open DriveMail and tap the gear icon to open Settings.</li>
+    <li>Under <strong>Email providers</strong>, switch on the services you use.</li>
+    <li>Fill in the sign-in details for each one (see below), and give each a short spoken nickname if you like, such as "work" or "personal".</li>
+    <li>Mount your phone, tap <strong>Start driving</strong>, and keep DriveMail open during your trip.</li>
+  </ol>
+  <p>DriveMail announces email that arrives after you tap Start driving. Set things up while parked.</p>
+
+  <h2>Setting up your email</h2>
+  <div class="card">
+    <h3>iCloud Mail</h3>
+    <p>Use an app-specific password, not your Apple Account password. Create one at <a href="https://account.apple.com">account.apple.com</a> under Sign-In and Security › App-Specific Passwords. Your Apple Account needs two-factor authentication.</p>
+  </div>
+  <div class="card">
+    <h3>Gmail</h3>
+    <p>Turn on 2-Step Verification in your Google Account, then create an app password at <a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>. Work or school Google accounts may have app passwords turned off by an administrator.</p>
+  </div>
+  <div class="card">
+    <h3>Yahoo Mail</h3>
+    <p>In Yahoo's <a href="https://login.yahoo.com/account/security">Account security</a> page, choose Generate app password, name it DriveMail, and paste the password into DriveMail.</p>
+  </div>
+  <div class="card">
+    <h3>Outlook (personal)</h3>
+    <p>For Outlook.com, Hotmail, and Live addresses, tap <strong>Add personal Outlook</strong> and sign in on Microsoft's page. DriveMail never sees your Microsoft password.</p>
+  </div>
+  <div class="card">
+    <h3>Outlook (work, Microsoft 365)</h3>
+    <p>Tap <strong>Add work Outlook</strong>, then sign in with your work email and network password and approve the number in <a href="https://apps.apple.com/app/microsoft-authenticator/id983156458">Microsoft Authenticator</a>. Many companies require IT approval before outside apps can read work email. If you see "Need admin approval", ask your IT department to approve DriveMail.</p>
+  </div>
+
+  <h2>What you can say</h2>
+  <p>A short tone plays when it's your turn to talk.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>When DriveMail asks</th><th>You can say</th></tr></thead>
+      <tbody>
+        <tr><td>"Want me to read it?"</td><td>yes, sure, read it · no, skip, later · stop</td></tr>
+        <tr><td>"Want me to read the whole email?" (after a summary)</td><td>yes · no · stop</td></tr>
+        <tr><td>"Would you like to reply?"</td><td>yes · no · stop</td></tr>
+        <tr><td>After your reply is read back</td><td>send it · change it · cancel</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Emails you skip can be read later with the <strong>Read skipped emails</strong> button on the main screen.</p>
+
+  <h2>Troubleshooting</h2>
+  <details>
+    <summary>"Sign-in failed" or "Couldn't sign in"</summary>
+    <p>Make sure you're using an app password, not your regular password, and that the email address is exactly right. Changing your main account password can cancel app passwords, so you may need a new one. For Outlook, remove the account and add it again.</p>
+  </details>
+  <details>
+    <summary>New email isn't being announced</summary>
+    <ul>
+      <li>Keep DriveMail open on screen during your drive. iPhone pauses apps in the background.</li>
+      <li>Only email that arrives after you tap Start driving is announced.</li>
+      <li>Check that the service is switched on under Email providers.</li>
+      <li>If Priority senders is on, only people on your list are announced.</li>
+      <li>DriveMail checks for new mail about every 20 seconds.</li>
+    </ul>
+  </details>
+  <details>
+    <summary>DriveMail doesn't understand my answers</summary>
+    <p>Wait for the tone before speaking, and use short answers like "yes", "no", or "send it". DriveMail listens with your iPhone's microphone, so a mount close to you helps, as does lowering music or fan noise.</p>
+  </details>
+  <details>
+    <summary>The voice is too quiet or hard to hear</summary>
+    <p>Turn up your car's volume while DriveMail is speaking. In Settings › Voice &amp; speed, you can switch on <strong>Pause music while DriveMail talks</strong>, choose a different voice, or change the speaking speed. Downloading an Enhanced or Premium voice in the iPhone Settings app (Accessibility › Spoken Content › Voices) makes reading much clearer.</p>
+  </details>
+  <details>
+    <summary>Summaries aren't available</summary>
+    <p>Summaries use Apple Intelligence, which needs a supported iPhone with Apple Intelligence turned on. Without it, DriveMail reads the first part of long emails instead.</p>
+  </details>
+  <details>
+    <summary>My reply appears twice in my Sent folder</summary>
+    <p>Please let us know which email service you're using, so DriveMail can be updated to stop saving the extra copy.</p>
+  </details>
+  <details>
+    <summary>Can DriveMail work with Proton Mail or other services?</summary>
+    <p>DriveMail currently supports iCloud Mail, Gmail, Yahoo Mail, and Outlook. Proton Mail doesn't allow other iPhone apps to connect. For Proton Mail, you can have Siri read its notifications aloud: in the iPhone Settings app, go to Notifications › Announce Notifications.</p>
+  </details>
+
+  <h2>Drive safely</h2>
+  <div class="safety">
+    <p>DriveMail is designed to be used hands-free. Set up accounts and settings while parked, keep your eyes on the road, and follow local laws about phone use while driving.</p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>DriveMail works entirely on your iPhone and doesn't collect your data. Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">DriveMail by Dave Pickles · <a href="mailto:jimmy@askjimmy.ca">jimmy@askjimmy.ca</a></div>
+</footer>
+</body>
+</html>

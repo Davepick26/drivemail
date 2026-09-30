@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DriveMail Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f0;
+    --surface: #ffffff;
+    --text: #1c2126;
+    --muted: #5b636b;
+    --line: #e2e0d8;
+    --accent: #b77d0a;
+    --accent-soft: #fbf1db;
+    --road: #1c2126;
+    --road-text: #f2f2eb;
+    --signal: #f2b533;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15191d;
+      --surface: #1c2126;
+      --text: #eceae3;
+      --muted: #a3aab1;
+      --line: #2c333a;
+      --accent: #f2b533;
+      --accent-soft: #2a2618;
+      --road: #0f1215;
+      --road-text: #f2f2eb;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15191d;
+    --surface: #1c2126;
+    --text: #eceae3;
+    --muted: #a3aab1;
+    --line: #2c333a;
+    --accent: #f2b533;
+    --accent-soft: #2a2618;
+    --road: #0f1215;
+    --road-text: #f2f2eb;
+  }
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  header {
+    background: var(--road);
+    color: var(--road-text);
+    padding: 3rem 1.25rem 2.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 1.1rem;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--signal) 0 38px, transparent 38px 70px);
+    opacity: 0.85;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; }
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 0.95rem;
+    color: var(--signal);
+    text-transform: uppercase;
+  }
+  h1 { font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1.15; margin: 0.35rem 0 0.5rem; }
+  .dates { color: #b9bfc5; font-size: 0.95rem; margin: 0; }
+  main { padding: 2rem 1.25rem 3rem; }
+  .summary {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .summary p { margin: 0; }
+  h2 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 0.35rem 0; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+  .never li::marker { content: "✕  "; color: var(--accent); }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">DriveMail</div>
+    <h1>Privacy Policy</h1>
+    <p class="dates">Effective September 30, 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="summary">
+    <p><strong>The short version:</strong> DriveMail reads your email aloud while you drive and lets you reply by voice. It works entirely on your iPhone. DriveMail's developer, Dave Pickles, does not run any servers, does not collect your personal information, and cannot see your email.</p>
+  </div>
+
+  <h2>What DriveMail keeps on your iPhone</h2>
+  <p>To work, DriveMail saves a small amount of information on your device only:</p>
+  <ul>
+    <li><strong>Account details</strong>: the email addresses you enter, the email services you switch on, and any spoken nicknames you give your accounts.</li>
+    <li><strong>Sign-in credentials</strong>: app passwords for iCloud Mail, Gmail, and Yahoo Mail, and Microsoft sign-in tokens for Outlook. These are stored in the iOS Keychain, Apple's secure storage on your iPhone.</li>
+    <li><strong>Your preferences</strong>: voice, speaking speed, summary and music settings, and your priority senders list. If you add priority senders from Contacts, DriveMail saves only the names and email addresses of the people you pick.</li>
+  </ul>
+  <div class="card">
+    <strong>DriveMail never asks for or stores</strong>
+    <ul class="never">
+      <li>Your main Apple Account, Google, Yahoo, or Microsoft password</li>
+      <li>Recordings of your voice</li>
+      <li>Copies of your email after your drive ends</li>
+    </ul>
+  </div>
+
+  <h2>How DriveMail reads and sends email</h2>
+  <p>During a drive, DriveMail connects directly from your iPhone to the email services you have switched on (Apple iCloud Mail, Google Gmail, Yahoo Mail, and Microsoft Outlook) over encrypted connections. It uses these connections to:</p>
+  <ul>
+    <li>notice new messages that arrive after you tap Start driving;</li>
+    <li>download those messages so they can be read or summarized aloud;</li>
+    <li>mark messages as read after they are read to you;</li>
+    <li>send replies only after you hear them read back and say "send it"; and</li>
+    <li>save a copy of your reply in your Sent folder, when your email service does not do this itself.</li>
+  </ul>
+  <p>Messages are held in your iPhone's memory only while a drive is running. Emails you skip are remembered only until you stop driving.</p>
+
+  <h3>Microsoft Outlook sign-in</h3>
+  <p>For Outlook, you sign in on Microsoft's own sign-in page, including any Microsoft Authenticator approval. DriveMail never sees your Microsoft password. Microsoft gives DriveMail permission to read and update your mail, send mail on your behalf, see your basic profile (name and email address), and stay signed in between drives.</p>
+
+  <h2>Voice, speech, and summaries</h2>
+  <ul>
+    <li><strong>Reading aloud</strong> uses Apple's built-in voices on your iPhone.</li>
+    <li><strong>Your spoken answers and dictated replies</strong> are turned into text by Apple's speech recognition. DriveMail asks for this to happen on your iPhone whenever your device supports it. If on-device recognition isn't available, Apple may process the audio under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. DriveMail does not record or keep any audio.</li>
+    <li><strong>The microphone</strong> is used only right after DriveMail asks you a question, which is signaled by a short tone.</li>
+    <li><strong>Summaries</strong> of long emails are made by Apple Intelligence on your iPhone. Email text is not sent anywhere to be summarized.</li>
+  </ul>
+
+  <h2>What DriveMail does not do</h2>
+  <ul>
+    <li>No analytics, usage tracking, or crash reporting services</li>
+    <li>No advertising, and no tracking across other apps or websites</li>
+    <li>No third-party software libraries that collect data</li>
+    <li>No selling, renting, or sharing of your information</li>
+    <li>No servers run by the developer, so there is nowhere for your data to go</li>
+  </ul>
+
+  <h2>Other companies involved</h2>
+  <p>Your email stays with the services you already use, and each handles it under its own privacy policy:</p>
+  <ul>
+    <li><a href="https://www.apple.com/legal/privacy/">Apple</a> (iCloud Mail, speech recognition, voices, Apple Intelligence)</li>
+    <li><a href="https://policies.google.com/privacy">Google</a> (Gmail)</li>
+    <li><a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html">Yahoo</a> (Yahoo Mail)</li>
+    <li><a href="https://privacy.microsoft.com/privacystatement">Microsoft</a> (Outlook and Microsoft sign-in)</li>
+  </ul>
+
+  <h2>Removing your information</h2>
+  <ul>
+    <li><strong>Remove an account in DriveMail:</strong> clear its password in Settings, or swipe left on an Outlook account. This deletes its credentials from your iPhone.</li>
+    <li><strong>Delete the app:</strong> deleting DriveMail removes its settings. To be sure sign-in credentials are also removed, remove your accounts in DriveMail first.</li>
+    <li><strong>Cancel DriveMail's access at the source:</strong> you can revoke access at any time from your Apple Account (App-Specific Passwords), Google Account (App passwords), Yahoo Account security page, or your Microsoft account's app permissions page.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>DriveMail is intended for drivers and is not directed at children under 13. It does not knowingly collect information from children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>DriveMail is developed by Dave Pickles. Questions about privacy in DriveMail? Email <a href="mailto:jimmy@askjimmy.ca">jimmy@askjimmy.ca</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">DriveMail by Dave Pickles · Privacy Policy · Effective September 30, 2026</div>
+</footer>
+</body>
+</html>
